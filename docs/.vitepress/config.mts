@@ -7,13 +7,13 @@ export default defineConfig({
   title: "Moeus",//网站的标题，标签页
   description: "nihao",
   head: [
-  ['link', { rel: 'icon', href: 'public/logo.jpg' }]], 
+  ['link', { rel: 'icon', href: 'logo.jpg' }]], 
 
 
   themeConfig: {
   // 网站图标
     // https://vitepress.dev/reference/default-theme-config
-    logo: "public/logo.jpg",
+    logo: "logo.jpg",
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
