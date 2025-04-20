@@ -6,7 +6,7 @@ hero:
   name: "Moeus' note"
   text: "For sharing"
   image:
-    src: public/开心工作.svg
+    src: public/main_chart.svg
     alt: VitePress
   actions:
     - theme: brand
