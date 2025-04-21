@@ -1,11 +1,11 @@
 import subprocess
 
-def git_push(repo_path, remote='origin', branch='main'):
+def git_push(repo_path, remote='origin', branch='master'):
     try:
         # 切换到仓库目录
         subprocess.run(['git', '-C', repo_path, 'add', '.'], check=True)
         # 提交更改
-        subprocess.run(['git', '-C', repo_path, 'commit', '-m', 'Automated commit'], check=True)
+        subprocess.run(['git', '-C', repo_path, 'commit', '-m', 'Python script automated commit'], check=True)
         # 推送到远程仓库
         subprocess.run(['git', '-C', repo_path, 'push', remote, branch], check=True)
         print("成功推送到远程仓库。")
