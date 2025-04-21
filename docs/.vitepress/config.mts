@@ -32,12 +32,7 @@ export default defineConfig({
     
     sidebar: [
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-          { text: 'Custom Components', link: '/custom-components' },
-        ]
+        
       }
     ],
     // 媒体平台链接
