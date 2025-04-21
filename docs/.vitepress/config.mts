@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
@@ -32,7 +31,7 @@ export default defineConfig({
     
     sidebar: [
       {
-        
+
       }
     ],
     // 媒体平台链接

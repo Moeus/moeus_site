@@ -3,15 +3,19 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
-
+import Layout from './Layout.vue'
+import  Linkcard  from './components/Linkcard.vue'
 export default {
   extends: DefaultTheme,
   Layout: () => {
-    return h(DefaultTheme.Layout, null, {
+    return h(Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+
     })
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    // https://vitepress.dev/guide/extending-default-theme#enhanceapp
+    app.component("Linkcard",Linkcard)
   }
 } satisfies Theme
