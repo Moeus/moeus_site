@@ -3,8 +3,9 @@
 layout: home
 
 hero:
-  name: "Moeus' note"
+  name: "Moeus note"
   text: "For sharing"
+  tagline: "无限进步"
   image:
     src: main_chart.svg
     alt: VitePress
