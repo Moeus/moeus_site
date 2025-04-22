@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Moeus note"
-  text: "For sharing"
-  tagline: "无限进步"
+  name: "Note-Sharing"
+  text: "Sow the seeds of ideas"
+  tagline: "计算机是一门越学越觉得还需要学更多内容的学科"
   image:
     src: main_chart.svg
     alt: VitePress

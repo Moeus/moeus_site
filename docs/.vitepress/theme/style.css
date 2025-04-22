@@ -43,6 +43,7 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
@@ -90,20 +91,73 @@
  * Component: Home
  * -------------------------------------------------------------------------- */
 
-:root {
+ :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
+  --vp-home-hero-name-background: linear-gradient(
     120deg,
     #bd34fe 30%,
     #41d1ff
   );
-
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
     #bd34fe 50%,
     #47caff 50%
   );
   --vp-home-hero-image-filter: blur(44px);
+}
+
+/* 定义名字背景颜色渐变动画 */
+@keyframes nameBackgroundGradient {
+  0% {
+    --vp-home-hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  }
+  25% {
+    --vp-home-hero-name-background: linear-gradient(120deg, #ff6b6b 30%, #6beaff);
+  }
+  50% {
+    --vp-home-hero-name-background: linear-gradient(120deg, #ffd700 30%, #7fffd4);
+  }
+  75% {
+    --vp-home-hero-name-background: linear-gradient(120deg, #98fb98 30%, #dda0dd);
+  }
+  100% {
+    --vp-home-hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  }
+}
+
+/* 应用名字背景颜色渐变动画 */
+:root {
+  --vp-home-hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  animation: nameBackgroundGradient 10s infinite;
+}
+
+/* 定义图像背景颜色渐变动画 */
+@keyframes imageBackgroundGradient {
+  0% {
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  }
+  25% {
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #ff6b6b 50%, #6beaff 50%);
+  }
+  50% {
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #ffd700 50%, #7fffd4 50%);
+  }
+  75% {
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #98fb98 50%, #dda0dd 50%);
+  }
+  100% {
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  }
+}
+
+/* 应用图像背景颜色渐变动画 */
+:root {
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #bd34fe 50%,
+    #47caff 50%
+  );
+  animation: imageBackgroundGradient 10s infinite;
 }
 
 @media (min-width: 640px) {
@@ -117,7 +171,6 @@
     --vp-home-hero-image-filter: blur(68px);
   }
 }
-
 /**
  * Component: Custom Block
  * -------------------------------------------------------------------------- */

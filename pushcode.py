@@ -5,7 +5,7 @@ def git_push(repo_path, remote='origin', branch='master'):
         # 切换到仓库目录
         subprocess.run(['git', '-C', repo_path, 'add', '.'], check=True)
         # 提交更改
-        subprocess.run(['git', '-C', repo_path, 'commit', '-m', '调整布局，测试vue，黑白切换动画'], check=True)
+        subprocess.run(['git', '-C', repo_path, 'commit', '-m', '增加鼠标粒子动画'], check=True)
         # 推送到远程仓库
         subprocess.run(['git', '-C', repo_path, 'push', remote, branch], check=True)
         print("成功推送到远程仓库。")

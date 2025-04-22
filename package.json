@@ -8,6 +8,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "@types/animejs": "3.1.13",
+    "animejs": "3.2.2",
     "vue": "^3.5.13"
   }
 }
