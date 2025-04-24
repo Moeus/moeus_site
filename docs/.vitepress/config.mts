@@ -13,8 +13,10 @@ export default defineConfig({
   srcDir:"../src",
 
   vite:{
-    plugins:[]
+    plugins:[ ,]
   },
+
+ 
 
   themeConfig: {
   // 网站图标

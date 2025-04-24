@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Note-Sharing"
-  text: "Sow the seeds of ideas"
+  text: "Right way to get started is all you need."
   tagline: "计算机是一门越学越觉得还需要学更多内容的学科"
   image:
     src: main_chart.svg
