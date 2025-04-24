@@ -7,6 +7,7 @@
     css统一写在docs\.vitepress\theme\style.css，添加vue组件时也在这个文件夹内，
     vue组件需要在index.ts内被设置为全局组件
 
+
 2025-4-21
 ----对源文件的移动
     网页的源文件放在项目根的同级目录，效果与在根目录内是一样的，直接使用/访问src内的index.md
@@ -15,3 +16,16 @@
 ----添加vue
     vue组件要在docs\.vitepress\theme\components内写，然后再index.ts内使用enhanceApp来
     注册为全局组件，在任意md内可以被直接使用
+
+2025-4-24
+----加入inspira UI
+    安装过程参考了BiliBili <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114025459352004&bvid=BV1vwAeenEFo&cid=28460125687&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+    使用inspira UI的组件，组件源代码在docs\.vitepress\theme\components\inspira_ui\
+    组件的实例和再封装放在components下
+
+----关于tailwindcss
+    使用官网上针对vite的安装过程，
+    vscode中css文件对tailwindcss的引用会报错，这是在正常现象，并不代表不能使用
+
+----引入了开源图标库lucide，官网https://lucide.dev/
+    再NewsCard组件中使用到这个库的箭头图标
