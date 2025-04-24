@@ -12,9 +12,8 @@ export default defineConfig({
   // 网页源数据和静态数据public所在目录，为根的同级目录
   srcDir:"../src",
 
-  vite:{
-    plugins:[ ,]
-  },
+  vite: {},
+
 
  
 

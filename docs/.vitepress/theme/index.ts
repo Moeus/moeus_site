@@ -5,7 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import MyLayout from './components/Layout.vue'
 import  Linkcard  from './components/Linkcard.vue'
-
+import NewsCard from './components/NewsCard.vue'
 
 export default {
   extends: DefaultTheme,
@@ -18,5 +18,6 @@ export default {
     // ...
     // https://vitepress.dev/guide/extending-default-theme#enhanceapp
     app.component("Linkcard",Linkcard)
+    app.component("NewsCard",NewsCard)
   }
 } satisfies Theme

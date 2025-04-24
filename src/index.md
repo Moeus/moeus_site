@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Markdown Examples
-      link: /markdown-examples
+      link: /example
     - theme: alt
       text: API Examples
       link: /api-examples
@@ -27,3 +27,5 @@ features:
 ---
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0adccbda-572d-4ddd-ab8e-e5d33dd9a08b/deploy-status)](https://app.netlify.com/sites/moeus/deploys)
+
+<NewsCard/>
