@@ -13,7 +13,7 @@
       name: "Sarah Chen",
       designation: "Product Manager at TechFlow",
       image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "/qq.jpg",
     },
     {
       quote:
@@ -26,26 +26,26 @@
     {
       quote:
         "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
+      name: "",
       designation: "Operations Director at CloudScale",
       image:
-        "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "",
     },
     {
       quote:
         "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
+      name: "今日头条",
       designation: "Engineering Lead at DataPro",
       image:
-        "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/1d3af89b004641179d479a89e0537a41~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1746114957&x-signature=36uyUx5pA7FKOFYXSfq9j9GzVJ0%3D",
     },
     {
       quote:
         "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
+      name: "知乎日报",
       designation: "VP of Technology at FutureNet",
       image:
-        "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://pic1.zhimg.com/v2-1f6eacca593164fbf17b3fdd2baf4304_fhd.jpg?source=8673f162",
     },
   ];
   </script>

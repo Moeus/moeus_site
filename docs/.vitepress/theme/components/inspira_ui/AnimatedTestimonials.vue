@@ -35,7 +35,7 @@
               }"
               class="absolute inset-0 origin-bottom"
             >
-              <NuxtImg
+              <img
                 :src="testimonial.image"
                 :alt="testimonial.name"
                 width="500"
@@ -71,9 +71,9 @@
           <h3 class="text-2xl font-bold text-black dark:text-white">
             {{ props.testimonials[active].name }}
           </h3>
-          <p class="text-sm text-gray-500 dark:text-neutral-500">
+          <a class="11" href="#">
             {{ props.testimonials[active].designation }}
-          </p>
+          </a>
           <Motion
             as="p"
             class="mt-8 text-lg text-gray-500 dark:text-neutral-300"
@@ -187,3 +187,18 @@ function randomRotateY() {
   return Math.floor(Math.random() * 21) - 10;
 }
 </script>
+
+<style scoped>
+a {
+  font-size: 0.875rem; /* text-sm 对应的值 */
+  color: #6b7280; /* text-gray-500 对应的值 */
+  text-decoration: underline;
+}
+
+/* 适配暗黑模式 */
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #a3a3a3; /* dark:text-neutral-500 对应的值 */
+  }
+}
+</style> 
