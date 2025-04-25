@@ -35,7 +35,9 @@
 ----加入彩虹渐变背景色
     详细见style.css中的rainbow关键帧
 
-----对AnimatedTestimonials组件的参数和内容进行了重写
+----对AnimatedNewsItems件的参数和内容进行了重写
     组件内a标签的href属性必须是https开头并且target属性设置为_blank才能进行外链跳转
     对组件的参数进行了重写，SourceTextLink:string[]这个参数的长度必须为2
-    
+
+----配置微软的Clarity分析工具
+    详细内容在config.mts内的transformHead函数

@@ -6,8 +6,8 @@
         <div class="relative h-80 w-full">
           <AnimatePresence>
             <Motion
-              v-for="(testimonial, index) in props.testimonials"
-              :key="testimonial.ImageUrl"
+              v-for="(NewsItem, index) in props.NewsItems"
+              :key="NewsItem.ImageUrl"
               as="div"
               :initial="{
                 opacity: 0,
@@ -20,7 +20,7 @@
                 scale: isActive(index) ? 1 : 0.95,
                 z: isActive(index) ? 0 : -100,
                 rotate: isActive(index) ? 0 : randomRotateY(),
-                zIndex: isActive(index) ? 40 : testimonials.length + 2 - index,
+                zIndex: isActive(index) ? 40 : NewsItems.length + 2 - index,
                 y: isActive(index) ? [0, -80, 0] : 0,
               }"
               :exit="{
@@ -36,8 +36,8 @@
               class="absolute inset-0 origin-bottom"
             >
               <img
-                :src="testimonial.ImageUrl"
-                :alt="testimonial.Title"
+                :src="NewsItem.ImageUrl"
+                :alt="NewsItem.Title"
                 width="500"
                 height="500"
                 :draggable="false"
@@ -69,10 +69,10 @@
           }"
         >
           <h3 class="text-2xl font-bold text-black dark:text-white">
-            {{ props.testimonials[active].Title }}
+            {{ props.NewsItems[active].Title }}
           </h3>
-          <a class="11" :href="props.testimonials[active].SourceTextLink[1]" target="_blank">
-            {{ props.testimonials[active].SourceTextLink[0] }}
+          <a class="11" :href="props.NewsItems[active].SourceTextLink[1]" target="_blank">
+            {{ props.NewsItems[active].SourceTextLink[0] }}
           </a>
           <Motion
             as="p"
@@ -130,22 +130,22 @@
 
 <script lang="ts" setup>
 import { ArrowRight,ArrowLeft  } from 'lucide-vue-next';
-import { Motion } from "motion-v";
+import {AnimatePresence, Motion} from "motion-v";
 import { ref,computed,onMounted,onUnmounted } from "vue";
-interface Testimonial {
+interface NewsItem {
   "MainText": string;
   "Title": string;
   "SourceTextLink":string[];// [text, link]
   "ImageUrl": string;
 }
 interface Props {
-  testimonials?: Testimonial[];
+  NewsItems?: NewsItem[];
   autoplay?: boolean;
   duration?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  testimonials: () => [],
+  NewsItems: () => [],
   autoplay: () => false,
   duration: 5000,
 });
@@ -156,7 +156,7 @@ const active = ref(0);
 const interval = ref<any>();
 
 const activeTestimonialQuote = computed(() => {
-  return props.testimonials[active.value].MainText.split(" ");
+  return props.NewsItems[active.value].MainText.split(" ");
 });
 
 onMounted(() => {
@@ -172,11 +172,11 @@ onUnmounted(() => {
 });
 
 function handleNext() {
-  active.value = (active.value + 1) % props.testimonials.length;
+  active.value = (active.value + 1) % props.NewsItems.length;
 }
 
 function handlePrev() {
-  active.value = (active.value - 1 + props.testimonials.length) % props.testimonials.length;
+  active.value = (active.value - 1 + props.NewsItems.length) % props.NewsItems.length;
 }
 
 function isActive(index: number) {

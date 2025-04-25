@@ -1,16 +1,21 @@
 <template>
     <ClientOnly>
-      <AnimatedTestimonials :testimonials="testimonials" :autoplay="false" :duration="5000" />
+      <AnimatedTestimonials :NewsItems="NewsItems" :autoplay="false" :duration="5000" />
     </ClientOnly>
   </template>
   
   <script lang="ts" setup>
-import AnimatedTestimonials from "./inspira_ui/AnimatedTestimonials.vue";
+import AnimatedTestimonials from "./inspira_ui/AnimatedNewsItems.vue";
 
 
-  const testimonials= [
+  const NewsItems= [
 //(@#
-//asdknfpowssad;lkfgmnwp;sdfaw
+    {
+      "MainText": "123123",
+  "Title": "ceshi",
+  "SourceTextLink":["ceshiyx","/qq.jpg"],// [text, link]
+  "ImageUrl": "/qq.jpg",
+    }
 //(@#
   ];
 
