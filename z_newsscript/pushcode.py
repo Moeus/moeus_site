@@ -7,7 +7,7 @@ def git_push(repo_path, remote='origin', branch='master'):
         # 提交更改
         subprocess.run(['git', '-C', repo_path, 'commit', '-m', '修改和测试新闻卡片'], check=True)
         # 推送到远程仓库
-        # subprocess.run(['git', '-C', repo_path, 'push', remote, branch], check=True)
+        subprocess.run(['git', '-C', repo_path, 'push', remote, branch], check=True)
         print("成功推送到远程仓库。")
     except subprocess.CalledProcessError as e:
         print(f"推送过程中出现错误: {e}")
