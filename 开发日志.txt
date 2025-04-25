@@ -29,3 +29,13 @@
 
 ----引入了开源图标库lucide，官网https://lucide.dev/
     再NewsCard组件中使用到这个库的箭头图标
+
+
+2025-4-25
+----加入彩虹渐变背景色
+    详细见style.css中的rainbow关键帧
+
+----对AnimatedTestimonials组件的参数和内容进行了重写
+    组件内a标签的href属性必须是https开头并且target属性设置为_blank才能进行外链跳转
+    对组件的参数进行了重写，SourceTextLink:string[]这个参数的长度必须为2
+    

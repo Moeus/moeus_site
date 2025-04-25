@@ -1,0 +1,14 @@
+[
+    {
+    "MainText": "你好你阿红你哦啊hop",
+    "Title": "Testimonial 1",
+    "SourceTextLink":["今日头条", "https://www.toutiao.com"],
+    "ImageUrl": "/qq.jpg"
+    },
+    {
+    "MainText": "你好你阿红你哦啊hop",
+    "Title": "Testimonial 2",
+    "SourceTextLink":["澎湃新闻", "https://www.pengpai.com"],
+    "ImageUrl": "/wechat.png"
+    }
+]

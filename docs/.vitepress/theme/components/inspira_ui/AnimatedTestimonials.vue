@@ -7,7 +7,7 @@
           <AnimatePresence>
             <Motion
               v-for="(testimonial, index) in props.testimonials"
-              :key="testimonial.image"
+              :key="testimonial.ImageUrl"
               as="div"
               :initial="{
                 opacity: 0,
@@ -36,8 +36,8 @@
               class="absolute inset-0 origin-bottom"
             >
               <img
-                :src="testimonial.image"
-                :alt="testimonial.name"
+                :src="testimonial.ImageUrl"
+                :alt="testimonial.Title"
                 width="500"
                 height="500"
                 :draggable="false"
@@ -69,10 +69,10 @@
           }"
         >
           <h3 class="text-2xl font-bold text-black dark:text-white">
-            {{ props.testimonials[active].name }}
+            {{ props.testimonials[active].Title }}
           </h3>
-          <a class="11" href="#">
-            {{ props.testimonials[active].designation }}
+          <a class="11" :href="props.testimonials[active].SourceTextLink[1]" target="_blank">
+            {{ props.testimonials[active].SourceTextLink[0] }}
           </a>
           <Motion
             as="p"
@@ -133,10 +133,10 @@ import { ArrowRight,ArrowLeft  } from 'lucide-vue-next';
 import { Motion } from "motion-v";
 import { ref,computed,onMounted,onUnmounted } from "vue";
 interface Testimonial {
-  quote: string;
-  name: string;
-  designation: string;
-  image: string;
+  "MainText": string;
+  "Title": string;
+  "SourceTextLink":string[];// [text, link]
+  "ImageUrl": string;
 }
 interface Props {
   testimonials?: Testimonial[];
@@ -156,7 +156,7 @@ const active = ref(0);
 const interval = ref<any>();
 
 const activeTestimonialQuote = computed(() => {
-  return props.testimonials[active.value].quote.split(" ");
+  return props.testimonials[active.value].MainText.split(" ");
 });
 
 onMounted(() => {
