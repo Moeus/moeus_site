@@ -1,7 +1,7 @@
 import asyncio
 import json
 import aiohttp
-import root_logger
+from tool_package.root_logger import root_logger
 import queue
 import os
 async def run_workflow(news: str,q:queue.Queue,Authorization:str=""):
