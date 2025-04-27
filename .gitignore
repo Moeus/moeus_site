@@ -4,3 +4,4 @@ dist
 .idea
 push_coze_new
 get_news/chrome-win
+get_news/tool_package/__pycache__
