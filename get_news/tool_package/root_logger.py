@@ -11,7 +11,7 @@ formatter = logging.Formatter(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 # 创建文件处理器，将日志写入 working.log 文件，写入模式为追加，编码使用utf-8
-file_handler = logging.FileHandler('../working.log', mode='a', encoding='utf-8')
+file_handler = logging.FileHandler('./working.log', mode='a', encoding='utf-8')
 file_handler.setLevel(logging.WARNING)
 file_handler.setFormatter(formatter)
 root_logger.addHandler(file_handler)

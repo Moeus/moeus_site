@@ -38,13 +38,17 @@ async def send_request(news:NewsItem,q:queue.Queue):
                 news["Title"]=target["Title"]
                 news["MainText"]=target["MainText"]
                 q.put(news)
+            else:
+                print(news)
         return 1
 
     except httpx.HTTPStatusError as http_err:
         root_logger.error(f"[Dify]HTTP error occurred: {http_err}")
+        print(news)
         return 0
     except Exception as err:
         root_logger.error(f"[Dify]An error occurred: {err}")
+        print(news)
         return 0
     return None
 

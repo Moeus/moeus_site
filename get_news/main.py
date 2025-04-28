@@ -16,9 +16,15 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 #新闻队列
 news_queue=queue.Queue()
 
+def delete_file(dir="./src/public"):
+    delete_list=json.load(open(os.path.join(script_dir,"res.json"), 'r',encoding="utf-8"))
+    if delete_list==[]:
+        return 
+    for delete in delete_list:
+        os.remove(os.path.join(dir,delete))  # 删除文件
 
+def download_image(image_url, Title,save_dir="./src/public"):
 
-def download_image(image_url, Title, save_dir="./src/public"):
     file_name = hashlib.md5(Title.encode()).hexdigest()  # 使用标题的 MD5 哈希作为文件名
     try:
         # 发送 GET 请求获取图片
@@ -131,11 +137,16 @@ if __name__ == "__main__":
     while not news_queue.empty():
         news=news_queue.get()
         news_list.append(news)
+    delete_file()
+    file_name_list=[]
     for news in news_list:
         news["ImageUrl"]=download_image(news["ImageUrl"],news["Title"])
-    write_to_vue(news_list)    
+        file_name_list.append(news["ImageUrl"])
+        
+    write_to_vue(news_list)
+        
     with open(os.path.join(script_dir,"res.json"), 'w',encoding="utf-8") as file:
         # 将列表写入 JSON 文件
-        json.dump(news_list, file, ensure_ascii=False, indent=4)
+        json.dump(file_name_list, file, ensure_ascii=False, indent=4)
     root_logger.info("[Dify]数据处理完成，结果已保存到res.json文件中")
     git_push()
