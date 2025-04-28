@@ -1,11 +1,11 @@
 import subprocess
-
+import os
 def git_push(repo_path, remote='origin', branch='master'):
     try:
         # 切换到仓库目录
         subprocess.run(['git', '-C', repo_path, 'add', '.'], check=True)
         # 提交更改
-        subprocess.run(['git', '-C', repo_path, 'commit', '-m', '修改和测试新闻卡片'], check=True)
+        subprocess.run(['git', '-C', repo_path, 'commit', '-m', 'python爬虫获取新闻自动提交'], check=True)
         # 推送到远程仓库
         subprocess.run(['git', '-C', repo_path, 'push', remote, branch], check=True)
         print("成功推送到远程仓库。")
@@ -16,6 +16,5 @@ def git_push(repo_path, remote='origin', branch='master'):
 
 if __name__ == "__main__":
     # 替换为你的仓库路径
-    repo_path = 'D:/website_file/moeus'
-    git_push(repo_path)
+    git_push(os.path.dirname(os.path.dirname(__file__)))
     

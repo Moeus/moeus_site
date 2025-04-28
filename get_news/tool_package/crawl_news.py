@@ -12,7 +12,7 @@ from DrissionPage import WebPage
 from DrissionPage import ChromiumOptions,SessionOptions
 import time
 import re
-from root_logger import root_logger
+from tool_package.root_logger import root_logger
 import random
 import queue
 from typing import TypedDict
@@ -149,7 +149,7 @@ def get_zhihuToday(webpage: WebPage,news_queue:queue.Queue):
         try:
             zhihu_articles["Title"] = tab.ele("@@tag()=p@@class=DailyHeader-title", timeout=1).text
             # 获取文章内所有p标签
-            content_eles=tab.ele("@@tag()=div@@class=content").eles("@tag():p")
+            content_eles=tab.ele("@@tag()=div@@class=content",timeout=1).eles("@tag():p",timeout=3)
             contents =""
             for ele in content_eles:
                 contents=contents+ele.text
@@ -198,7 +198,7 @@ def get_pengpai(webpage: WebPage,news_queue:queue.Queue):
                     contents=contents+("".join(pengpai_context))
                 else:
                     contents=contents+pengpai_context
-            pengpai_news["content"] = contents
+            pengpai_news["MainText"] = contents
             pengpai_news["ImageUrl"] = tab.ele("@@tag()=div@@class:index_centent",timeout=1).ele("@tag()=img",timeout=1).attr("src")#澎湃新闻没有图片
             news_queue.put(pengpai_news.copy())  # 传回副本，因为这个变量被复用
             root_logger.info(f"[澎湃新闻]单次抓取完成{hot_url}")
