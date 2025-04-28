@@ -1,6 +1,6 @@
 import subprocess
 import os
-def git_push(repo_path, remote='origin', branch='master'):
+def git_push(repo_path=os.path.dirname(os.path.dirname(__file__)), remote='origin', branch='master'):
     try:
         # 切换到仓库目录
         subprocess.run(['git', '-C', repo_path, 'add', '.'], check=True)

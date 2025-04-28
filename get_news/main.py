@@ -6,6 +6,7 @@ import random
 import urllib3
 import requests
 import hashlib
+import subprocess
 #自制包的导入
 from tool_package.dify_solve import dify_main
 from tool_package.crawl_news import crawl_entrence
@@ -85,6 +86,20 @@ def write_to_vue(news_list):
         print(f"发生错误: {e}")
 
 
+
+def git_push(repo_path=os.path.dirname(os.path.dirname(__file__)), remote='origin', branch='master'):
+    try:
+        # 切换到仓库目录
+        subprocess.run(['git', '-C', repo_path, 'add', '.'], check=True)
+        # 提交更改
+        subprocess.run(['git', '-C', repo_path, 'commit', '-m', 'python爬虫获取新闻自动提交'], check=True)
+        # 推送到远程仓库
+        subprocess.run(['git', '-C', repo_path, 'push', remote, branch], check=True)
+        print("成功推送到远程仓库。")
+    except subprocess.CalledProcessError as e:
+        print(f"推送过程中出现错误: {e}")
+    except Exception as e:
+        print(f"发生未知错误: {e}")
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
     print(script_dir)
@@ -123,3 +138,4 @@ if __name__ == "__main__":
         # 将列表写入 JSON 文件
         json.dump(news_list, file, ensure_ascii=False, indent=4)
     root_logger.info("[Dify]数据处理完成，结果已保存到res.json文件中")
+    git_push()
