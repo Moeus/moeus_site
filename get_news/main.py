@@ -16,7 +16,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 #新闻队列
 news_queue=queue.Queue()
 
-def delete_file(dir="./src/public"):
+def delete_file(script_dir,dir="./src/public"):
     delete_list=json.load(open(os.path.join(script_dir,"res.json"), 'r',encoding="utf-8"))
     if delete_list==[]:
         return 
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     while not news_queue.empty():
         news=news_queue.get()
         news_list.append(news)
-    delete_file()
+    delete_file(script_dir=script_dir,dir="./src/public")
     file_name_list=[]
     for news in news_list:
         news["ImageUrl"]=download_image(news["ImageUrl"],news["Title"])

@@ -243,3 +243,73 @@
 方法: ele()
 参数: {'locator': '@tag():img', 'index': 1, 'timeout': 1}
 版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:16] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag()=img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:18] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag()=img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:24] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag()=img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:25] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag()=img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:27] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@@tag()=h1@@class:index_title', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:28] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@@tag()=h1@@class:index_title', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:29] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag()=img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:31] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@@tag()=h1@@class:index_title', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:33] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag()=img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:20:35] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag()=img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:21:10] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag():img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:21:14] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag():img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:21:17] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag():img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
+[root][ERROR][2025-04-28 19:21:19] 
+没有找到元素。
+方法: ele()
+参数: {'locator': '@tag():img', 'index': 1, 'timeout': 1}
+版本: 4.1.0.17
