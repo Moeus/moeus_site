@@ -32,18 +32,22 @@ export default defineConfig({
         [
             'script',
             {
-                type: 'text/javascript',
                 async: "true",
                 src: 'https://www.googletagmanager.com/gtag/js?id=G-H1PTXXDN13'
+            }
+        ],
+        [
+            'script',
+            {
+                type: 'text/javascript'
             },
             `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-H1PTXXDN13');
-            console.log("谷歌分析工具已加载");`
+            gtag('config', 'G-H1PTXXDN13');cvonsole.log("谷歌分析工具已加载");`
         ]
     ];
-},
+} ,
   markdown: {
     toc: {
       level: [1, 2],},
