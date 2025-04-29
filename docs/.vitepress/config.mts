@@ -17,20 +17,33 @@ export default defineConfig({
   // 配置微软的Clarity分析工具
   transformHead: () => {
     return [
-      [
-        'script',
-        {
-          type: 'text/javascript'
-        },
-        `(function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "r9q9feyhjd");
-        console.log("微软Clarity分析工具已加载");`
-      ]
+        [
+            'script',
+            {
+                type: 'text/javascript'
+            },
+            `(function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "r9q9feyhjd");
+            console.log("微软Clarity分析工具已加载");`
+        ],
+        [
+            'script',
+            {
+                type: 'text/javascript',
+                async: "true",
+                src: 'https://www.googletagmanager.com/gtag/js?id=G-H1PTXXDN13'
+            },
+            `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-H1PTXXDN13');
+            console.log("谷歌分析工具已加载");`
+        ]
     ];
-  },
+},
   markdown: {
     toc: {
       level: [1, 2],},
