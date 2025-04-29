@@ -149,4 +149,4 @@ if __name__ == "__main__":
         # 将列表写入 JSON 文件
         json.dump(file_name_list, file, ensure_ascii=False, indent=4)
     root_logger.info("[Dify]数据处理完成，结果已保存到res.json文件中")
-    git_push()
+    # git_push()

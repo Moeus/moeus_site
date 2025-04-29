@@ -27,10 +27,22 @@ export default defineConfig({
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "r9q9feyhjd");
-        console.log("微软nb")`
+        console.log("微软Clarity分析工具已加载");`
       ]
     ];
   },
+  markdown: {
+    toc: {
+      level: [1, 2],},
+    // 组件插入h1标题下
+    config: (md) => {
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+        let htmlResult = slf.renderToken(tokens, idx, options)
+        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`
+        return htmlResult
+      }
+     },
+},
  
 
   themeConfig: {
@@ -40,21 +52,19 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' }, 
       {
-        text: '指南',
+        text: '机器学习',
         items: [
-          { text: '前言', link: '/preface' },
-          { text: '快速上手', link: '/getting-started' },
-          { text: '配置', link: '/configuration' }
+          { text: '从高等数学和线性代数的角度理解神经网络', link: 'machine_learning/machine_learning_1' },
         ]
       },
       { text: 'VitePress', link: 'https://vitepress.dev/' },
     ], 
-    
-    sidebar: [
-      {
-
-      }
-    ],
+    sidebarMenuLabel:'目录',
+    sidebar:{
+      "/machine_learning/": [
+        { text: '从高等数学和线性代数的角度理解神经网络', link: 'machine_learning/machine_learning_1' },
+      ]
+    },
     // 媒体平台链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Moeus', ariaLabel: 'GitHub' },
