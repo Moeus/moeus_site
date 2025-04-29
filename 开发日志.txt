@@ -42,7 +42,13 @@
 ----配置微软的Clarity分析工具
     详细内容在config.mts内的transformHead函数
 
+2025-4-29
+----markdown配置
+    加入ArticleMetadata组件，用于在md内h1标题下展示字数和阅读时长
 
+----移动端鼠标动画取消
+    layout组件内使用v-if来判断是否移动端，如果是移动端，
+    不渲染  <MouseFollower /> <MouseClick />，避免性能不好
 
 
 

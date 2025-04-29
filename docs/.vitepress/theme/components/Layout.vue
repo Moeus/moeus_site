@@ -38,6 +38,16 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     }
   )
 })
+
+import { ref, onMounted } from 'vue';
+
+const isMobile = ref(false);
+
+onMounted(() => {
+  const userAgent = navigator.userAgent;
+  const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  isMobile.value = mobileRegex.test(userAgent);
+});
 </script>
 
 
@@ -45,8 +55,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 <template>
   <DefaultTheme.Layout v-bind="$attrs">
     <template #layout-top>
-      <MouseFollower />
-      <MouseClick />
+      <div v-if="!isMobile">
+        <MouseFollower />
+        <MouseClick />
+      </div>
     </template>
   </DefaultTheme.Layout>
 </template>
