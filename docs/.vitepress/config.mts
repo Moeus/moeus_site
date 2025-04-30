@@ -109,7 +109,7 @@ export default defineConfig({
 
     // 版权信息
     footer: {
-      copyright: 'Copyright © 2015 - present Moeus. All rights reserved. Any unauthorized use, reproduction, or distribution of the content on this website is strictly prohibited.'
+      copyright: 'Copyright © 2025 - present Moeus. All rights reserved. Any unauthorized use, reproduction, or distribution of the content on this website is strictly prohibited.'
     },
 
 
